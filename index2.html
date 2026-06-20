@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancer Prediction System</title>
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='style2.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1>🩺 Cancer Prediction System</h1>
+
+            <p class="subtitle">
+                Predict Cancer Risk Using Machine Learning
+            </p>
+
+            <input type="number" id="age" placeholder="Age">
+
+            <select id="gender">
+                <option value="">Gender</option>
+                <option value="0">Female</option>
+                <option value="1">Male</option>
+            </select>
+
+            <input type="number" id="bmi" placeholder="BMI">
+
+            <select id="smoking">
+                <option value="">Smoking</option>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <input type="number"
+                   id="geneticRisk"
+                   placeholder="Genetic Risk">
+
+            <input type="number"
+                   id="physicalActivity"
+                   placeholder="Physical Activity">
+
+            <input type="number"
+                   id="alcoholIntake"
+                   placeholder="Alcohol Intake">
+
+            <select id="cancerHistory">
+                <option value="">Cancer History</option>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <button onclick="predictCancer()">
+                Predict Risk
+            </button>
+
+            <div id="loading">
+                Predicting...
+            </div>
+
+            <div id="result"></div>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script2.js') }}"></script>
+
+</body>
+</html>
